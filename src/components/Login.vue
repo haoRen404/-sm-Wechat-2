@@ -99,8 +99,10 @@
                         });
                         // 存储user对象(先保存,再跳转)(sessionStorage只能存字符串，所以需要将对象转换为json字符串)
                         window.localStorage.setItem("user", JSON.stringify(res.data.user));// 存储用户信息
-                        window.localStorage.setItem("token", JSON.stringify(res.data.user.token));// 存储token
+                        window.localStorage.setItem("token", JSON.stringify(res.data.token));// 存储token
                         window.localStorage.setItem("id", JSON.stringify(res.data.user.id));// 存储用户id
+
+                        // console.log("login: window.localStorage.getItem('token') = " + window.localStorage.getItem('token'));
                         // 页面跳转
                         this.$router.push({path: '/index'})
                     } else {

@@ -35,7 +35,7 @@ const router = new VueRouter({
     routes
 })
 
-// 挂载路由导航首位
+// 挂载路由导航守卫
 // 三个参数:(to,from,next),to是要访问什么,from是从哪来,next是要做什么
 router.beforeEach((to, from, next) => {
     if (to.path == '/login') return next();// 如要访问的是login则不拦截
